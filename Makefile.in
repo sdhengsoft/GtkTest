@@ -1,0 +1,11 @@
+CC=gcc
+CXX=g++
+
+RM=rm -f
+
+clean:
+	$(RM) *.o *.exe
+
+env:
+	@echo CPPFLAGS=$(CPPFLAGS)
+	@echo LDLIBS=$(LDLIBS)
