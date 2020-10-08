@@ -3,9 +3,11 @@ CXX=g++
 
 RM=rm -f
 
-clean:
+.PHONY: clean
+clean::
 	$(RM) *.o *.exe
 
+.PHONY: env
 env:
 	@echo CPPFLAGS=$(CPPFLAGS)
 	@echo LDLIBS=$(LDLIBS)

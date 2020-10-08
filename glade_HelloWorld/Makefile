@@ -8,4 +8,10 @@ default: glade_HelloWorld
 
 include $(PARENT_DIR)/Makefile.in
 
-glade_HelloWorld: glade_main.o glade_HelloWorld.o
+glade_HelloWorld: glade_main.o glade_HelloWorld.o glade_resources.o
+
+%.c: %.xml
+	glib-compile-resources.exe $< --generate-source --target=$@
+
+clean::
+	$(RM) glade_resources.c

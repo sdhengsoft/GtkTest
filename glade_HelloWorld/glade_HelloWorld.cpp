@@ -1,6 +1,6 @@
 #include "glade_HelloWorld.h"
 
-HelloWorld::HelloWorld() : ui{ Gtk::Builder::create_from_file( "HelloWorld.glade")}
+HelloWorld::HelloWorld() : ui{ Gtk::Builder::create_from_resource( "/HelloWorld/HelloWorld.glade")}
 {
   if ( ui) {
     ui->get_widget<Gtk::Box>( "box", box);
